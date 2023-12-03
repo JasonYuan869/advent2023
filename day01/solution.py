@@ -5,7 +5,7 @@ def part1(lines):
         second_digit = -1
 
         for ch in line:
-            if ch.isnumeric():
+            if ch.isdigit():
                 if first_digit == -1:
                     first_digit = int(ch) * 10
 
@@ -35,7 +35,7 @@ def part2(filename):
 
         for i in range(0, len(line)):
             ch = line[i]
-            if ch.isnumeric():
+            if ch.isdigit():
                 if first_digit == -1:
                     first_digit = int(ch) * 10
                 second_digit = int(ch)

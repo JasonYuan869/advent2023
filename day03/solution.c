@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #define INDEX(row, col) (m * (row) + (col))
-#define IS_NUMERIC(ch) (0x30 <= (ch) && (ch) <= 0x39)
+#define IS_NUMERIC(ch) ('0' <= (ch) && (ch) <= '9')
 
 // Sorted clockwise from the top left
 const int DIRECTION_VECTORS[8][2] = {{-1, -1}, {-1, 0}, {-1, 1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}};

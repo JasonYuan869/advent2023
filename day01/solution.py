@@ -1,6 +1,4 @@
-def part1(filename):
-    with open(filename, 'r') as f:
-        lines = f.readlines()
+def part1(lines):
     ret = 0
     for line in lines:
         first_digit = -1
@@ -17,8 +15,6 @@ def part1(filename):
     return ret
 
 def part2(filename):
-    with open(filename, 'r') as f:
-        lines = f.readlines()
     number_words = {
         'one': 1,
         'two': 2,
@@ -55,5 +51,8 @@ def part2(filename):
     return ret
 
 import sys
-print(part1(sys.argv[1]))
-print(part2(sys.argv[1]))
+filename = sys.argv[1]
+with open(filename, 'r') as f:
+        lines = f.readlines()
+print(part1(lines))
+print(part2(lines))

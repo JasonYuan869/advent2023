@@ -1,0 +1,14 @@
+#ifndef DAY07_CLASSIFICATION_H
+#define DAY07_CLASSIFICATION_H
+
+enum Classification {
+    FIVE_OF_A_KIND = 0,
+    FOUR_OF_A_KIND,
+    FULL_HOUSE,
+    THREE_OF_A_KIND,
+    TWO_PAIR,
+    ONE_PAIR,
+    HIGH_CARD
+};
+
+#endif //DAY07_CLASSIFICATION_H

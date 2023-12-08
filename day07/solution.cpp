@@ -1,12 +1,11 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <vector>
 
-#include "solution.h"
+#include "Hand.h"
+#include "Hand2.h"
 
 using namespace std;
-
 
 int part1(vector<Hand>& hands) {
   int ret = 0;
@@ -19,7 +18,6 @@ int part1(vector<Hand>& hands) {
 int part2(vector<Hand2>& hands) {
   int ret = 0;
   for (int i = 0; i < hands.size(); i++) {
-    cout << hands[i] << endl;
     ret += hands[i].bet * (i + 1);
   }
   return ret;
@@ -50,7 +48,7 @@ int main(int argc, char* argv[]) {
 
   vector<Hand2> hands2;
   for (auto& hand : hands) {
-    hands2.push_back(hand.intoHand2());
+    hands2.emplace_back(hand);
   }
 
   sort(hands2.begin(), hands2.end());
